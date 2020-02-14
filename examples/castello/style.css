@@ -1,0 +1,329 @@
+@font-face {
+	font-family: 'MuseoSansCyrl';
+	src: url('./fonts/MuseoSansCyrl-300.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'MuseoSansCyrl';
+	src: url('./fonts/MuseoSansCyrl-500.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'MuseoSansCyrl';
+	src: url('./fonts/MuseoSansCyrl-900.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+/* Reset styles */
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "MuseoSansCyrl", sans-serif;
+	font-weight: 300;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+/* Container styles */
+.App {
+	width: 100%;
+}
+.Container {
+	max-width: 1150px;
+	margin: 0 auto;
+}
+.Mobile-Wrap {
+	display: none;
+}
+
+/* Header styles */
+
+.Shadow {
+	box-shadow: 0px 15px 10px -7px #f5f5f5;
+}
+.Header {
+	padding-top: 15px;
+}
+.Header-Container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.Header-Menu {
+	margin-left: 48px;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.HeaderMenu-Top {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.HeaderMenu-Top a {
+	position: relative;
+	display: flex;
+	align-items: center;
+	font-weight: 500;
+	font-size: 16px;
+}
+.HeaderMenu-Top a img {
+	margin-right: 8px;
+}
+.HeaderMenuTop-Item span {
+	display: block;
+	position: relative;
+}
+.HeaderMenuTop-Item:nth-child(3) span {
+	color: #ab8b52;
+	border-bottom: 1px dashed;
+}
+.HeaderMenuTop-Item:nth-child(4) span {
+	color: #12313f;
+	border-bottom: 1px dashed;
+}
+.HeaderMenuTop-Item:nth-child(3) span:hover {
+	border-bottom: 1px solid transparent;
+}
+.HeaderMenuTop-Item:nth-child(4) span:hover {
+	border-bottom: 1px solid transparent;
+}
+.HeaderMenu-Nav {
+	width: 100%;
+}
+.HeaderMenu-Nav ul {
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.HeaderMenu-Nav ul li {
+	display: table-cell;
+	font-size: 14px;
+}
+.HeaderMenu-Nav ul li:hover {
+	text-shadow: 0 0 .65px #000, 0 0 .65px #000;
+}
+.Header-Call {
+	display: none;
+}
+
+/* Content styles */
+
+.Content {
+	padding-top: 43px;
+}
+.Content .GoBack {
+	text-decoration: underline;
+	font-size: 14px;
+}
+.Content .GoBack:hover {
+	text-decoration: none;
+}
+.Project-Decription h1 {
+	font-weight: 900;
+	font-size: 36px;
+}
+.ProjectDescription-Gallery {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.GalleryButton-Back, .GalleryButton-Forward {
+	width: 44px;
+	height: 44px;
+	border: 1px solid #ab8b52;
+	text-align: center;
+	flex-shrink: 0;
+	cursor: pointer;
+	color: #ab8b52;
+}
+.GalleryButton-Back img, .GalleryButton-Forward img {
+	margin-top: calc(50% - 9px);
+}
+.Gallery-Image {
+	align-self: center;
+	width: 100%;
+	margin: 0 17px;
+	flex-grow: 0;
+}
+.Gallery-Image img {
+	width: 100%;
+}
+.ProjectDescription-Info {
+	margin: 55px 0;
+	display: flex;
+	flex-direction: row;
+}
+.ProjectDescriptionInfo-Item {
+	margin-left: 66px;
+	padding-right: 66px;
+	/* position: relative; */
+	border-right: 1.5px solid #ececec;
+}
+.ProjectDescriptionInfo-Item:last-child {
+	border: none;
+}
+.ProjectDescriptionInfo-Item:first-child {
+	margin-left: 94px;
+	margin-top: -10px;
+}
+.Item-Number {
+	font-size: 48px;
+	font-weight: 500;
+	color: #ab8b52;
+}
+.Item-Attribute {
+	margin-top: 10px;
+	font-size: 18px;
+}
+
+/* Mobile version styles */
+
+@media screen and (max-width: 750px) {
+	.Container {
+		margin: 0 8px;
+		padding: 0;
+	}
+	.Shadow .Container {
+		margin: 0;
+		padding: 0;
+	}
+	.Container .Content {
+		margin-top: 25px;
+		padding: 0;
+	}
+	.Header-Container {
+		display: none;
+	}
+	.Header {
+		width: 100%;
+		padding: 0;
+	}
+	.Mobile-Wrap {
+		display: inline-block;
+		width: 100%;
+		height: 78px;
+	}
+	.Menu-Wrap {
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.Mobile-Menu {
+		display: none;
+	}
+	.MobileMenu-Show {
+		display: block;
+		width: 65vw;
+		height: 50vh;
+		z-index: 99;
+	}
+	.MobileMenu-Show nav {
+		height: 100%;
+		width: 100%;
+		background-color: #ab8b52;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	.MobileMenu-Show nav a {
+		color: #fff;
+		margin: 0 30px 0 30px;
+	}
+	.MobileMenu-Show nav a:hover {
+		font-weight: 300;
+		color: #fff;
+		margin: 0 20px 0 40px;
+		text-decoration: underline;
+	}
+	.MobileMenuIcon {
+		margin: 20px 0;
+		margin-left: -10px;
+		padding: 9px 20px;
+		border: 1px solid #ab8b52;
+		border-radius: 10px;
+		border-left: none;
+	}
+	.Mobile-Logo {
+		margin-top: 20px;
+	}
+	.Mobile-Call {
+		margin: 20px 0;
+		margin-right: -10px;
+		padding: 9px 20px;
+		border: 1px solid #ab8b52;
+		border-radius: 10px;
+		border-right: none;
+	}
+	.Project-Description {
+		margin-top: 30px;
+	}
+	.ProjectDescription-Gallery {
+		flex-wrap: wrap;
+	}
+	.Gallery-Image {
+		order: 1;
+		width: 100%;
+		margin: 0;
+		margin-bottom: 12px;
+	}
+	.GalleryButton-Back {
+		order: 2;
+	}
+	.GalleryButton-Forward {
+		order: 3;
+	}
+	.ProjectDescription-Info {
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 30px;
+	}
+	.ProjectDescriptionInfo-Item {
+		width: 75px;
+		height: 76px;
+		margin-left: 30px;
+		margin-bottom: 45px;
+		padding-right: 40px;
+		flex-grow: 1;
+		border-right: 1.5px solid #ececec;
+	}
+	.ProjectDescriptionInfo-Item:first-child::after {
+		display: block;
+		position: absolute;
+		right: 8px;
+		left: 8px;
+		margin: 5vh 0;
+		border-bottom: 1.5px solid #ececec;
+		content: '';
+		width: calc(100vw - 16px);
+	}
+	.Item-Number {
+		font-size: 24px;
+	}
+	.Item-Attribute {
+		margin-top: 0;
+		font-size: 16px;
+	}
+	.ProjectDescriptionInfo-Item:first-child {
+		margin-left: 30px;
+		margin-top: -5px;
+	}
+	.ProjectDescriptionInfo-Item:nth-child(odd) {
+		border-right: 1.5px solid #ececec;
+	}
+	.ProjectDescriptionInfo-Item:nth-child(even) {
+		border-right: none;
+	}
+}
