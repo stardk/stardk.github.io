@@ -117,7 +117,7 @@ body {
 .examples {
     width: 100vw;
     max-width: 100%;
-    height: calc(100vh - 200px);
+    /* height: calc(100vh - 200px); */
     max-height: 100%;
     padding: 100px 0;
     background-color: #000000;
@@ -185,4 +185,30 @@ body {
 }
 .email {
     font-size: 16px;
+}
+@media screen and (max-width: 1024px) {
+    .greeting {
+        padding-top: 100px;
+        height: calc(100vh - 100px);
+    }
+    .greeting__text, .about__text {
+        font-size: 36px;
+        max-width: 90%;
+    }
+    .technologies, .examples__list {
+        flex-wrap: wrap;
+    }
+    .examples > * {
+        max-width: 90%;
+    }
+    .item__technologies, .item__code {
+        margin-top: 25px;
+    }
+    .item__link, .item__code {
+        font-size: 24px;
+    }
+    .githubLink {
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
 }
