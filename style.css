@@ -95,7 +95,6 @@ body {
     width: 80%;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 .technologies a {
     flex-basis: calc(100% / 7);
@@ -204,7 +203,7 @@ body {
         font-size: 36px;
         max-width: 90%;
     }
-    .technologies, .examples__list {
+    .technologies {
         flex-wrap: wrap;
     }
     .examples > * {
