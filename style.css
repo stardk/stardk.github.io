@@ -16,27 +16,27 @@ body {
     scroll-behavior: smooth;
 }
 @keyframes floating {
-    from {top: -25px;}
-    to {top: 25px;}
+    from {bottom: 100px;}
+    to {bottom: 50px;}
 }
 
 @keyframes gradient {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0%{background-position:0% 0%}
+    100%{background-position:100% 100%}
 }
 .greeting {
     width: 100vw;
     max-width: 100%;
     height: calc(100vh - 200px);
-    background: linear-gradient(216deg, #0075fb, #a000fb, #00d9fb);
+    background: linear-gradient(-45deg, #8d00df, #0075fb, #00d9fb, #00fb69, #e2fb00);
     background-size: 600% 600%;
-    animation: gradient 10s ease infinite alternate;
+    animation: gradient 5s ease-in-out infinite alternate;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-top: 200px;    
+    padding-top: 200px;  
+    position: relative;  
 }
 .greeting__text, .about__text {
     color: #ffffff;
@@ -45,13 +45,9 @@ body {
     max-width: 75%;
 }
 .link {
-    position: relative;
-    height: 100px;
-    align-self: center;
-}
-.link__container {
     position: absolute;
-    min-width: 70px;
+    left: 50%;
+    transform: translateX(-50%);
     animation: floating 1s ease-in-out 0s infinite alternate;
     display: flex;
     flex-direction: column;
@@ -59,10 +55,10 @@ body {
     align-items: center;
     color: #ffffff;
 }
-.link__container:hover {
+.link:hover {
     animation-play-state: paused;
 }
-.link__container:hover .link__text {
+.link:hover .link__text {
     text-decoration: underline;
 }
 .link__text {
@@ -83,6 +79,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding: 30px 0 50px 0;
+    position: relative;
 }
 .about > * {
     max-width: 80%;
@@ -91,10 +88,10 @@ body {
     color: #000000;
 }
 .technologies {
-    margin-top: 100px;
+    margin: 100px;
     width: 80%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 .technologies a {
     flex-basis: calc(100% / 7);
@@ -109,17 +106,13 @@ body {
     filter: none;
     transform: scale(1.1);
 }
-.about__link {
-    margin-top: 100px;
-}
-.about__link .link__container * {
+.about__link * {
     color: #000000; 
 }
 .examples {
     width: 100vw;
     max-width: 100%;
     min-height: calc(100vh - 30px);
-    /* max-height: 100%; */
     padding: 30px 0;
     background-color: #000000;
     display: flex;
@@ -199,12 +192,22 @@ body {
         padding-top: 100px;
         height: calc(100vh - 100px);
     }
+    .about {
+        height: auto;
+    }
     .greeting__text, .about__text {
         font-size: 36px;
         max-width: 90%;
     }
     .technologies {
+        margin-top: 30px;
         flex-wrap: wrap;
+    }
+    .technologies a {
+        flex-basis: 50%;
+    }
+    .technologies a img {
+        height: 100px;
     }
     .examples > * {
         max-width: 90%;
